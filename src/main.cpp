@@ -4,58 +4,120 @@
 #include <SPI.h>
 #include <Motor.h>
 #include <Encoder.h>
+#include <PID.h>
+#include <DCMotorServo.h>
+//#include <PIDController.h>
 
-Motor m1(4, 5, 6, 7);
-int d = 255;
+#define P 0.5 
+#define I 0.0//0.
+#define D 0.0//0.3
+#define DC_MOTOR_ENCODER_1_INCH 1344
+
+long curTick, prevTick, timeout;
+double kP, kI, kD, pOut, iOut, dOut, targetPos, error, previousError, pidOut, currentPos;
+PID motPID(&error, &pidOut, &targetPos, P, I, D, P_ON_M, DIRECT); 
+//PID motPID(P, I, D, -255, 255);
+//PIDController motPID;
+//Encoder encoder(6, 7);
+
+DCMotorServo servo = DCMotorServo(4, 5, 6, 7);
+//Motor m1(4, 5);
 bool dir;
 int sign = -1;
+int position;
+
+void process_serial();
+
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(115200);
+  servo.myPID->SetTunings(P, I, D);
+  servo.setPWMSkip(50);
+  servo.setAccuracy(20);
   dir = true;
+  timeout = millis();
 }
 
 void loop() {
-  //m1.set_direction(dir);
-  // put your main code here, to run repeatedly:
-  /*for(int i = 0; i < 255; i++) {
-    m1.drive(i);
-    delayMicroseconds(255-i);
+  //wait 1s before starting
+  static unsigned long motor_timeout = millis() + 1000;
+  static bool motor_go = 0;
+  if(dir) {
+    position = DC_MOTOR_ENCODER_1_INCH;
   }
-  for(int i = 255; i > 0; i--) {
-    m1.drive(i);
-    delayMicroseconds(i);
+  else {
+    position = 0;//-DC_MOTOR_ENCODER_1_INCH;
   }
-  */
-  //m1.reset_ticks();
-  m1.set_speed(50);
-  m1.set_direction(true);
-  long startTime = micros();
-  long tickOffset = m1.get_ticks();
-  int counter = 40csdfjawfe; 
-  int speed = 255;
-  while(true) {
-    if(counter >= 100) {
-      counter = 10;
-    }
-    m1.set_speed(speed+counter); 
-    m1.run();
-    if(micros() - startTime > 100000) {
-      long ticksPerSec = m1.get_ticks() - tickOffset;
-      speed = ticksPerSec; 
-      Serial.println(ticksPerSec);
-      startTime = micros();
-      tickOffset = m1.get_ticks();
-      counter++;
-    }
-  }
-  m1.move_rel(20, 255);
-  
-  Serial.println(m1.get_ticks());
-  m1.move_rel(-20, 255);
-  Serial.println(m1.get_ticks());
-  //m1.move_rel(400, 255);
-  //m1.move_rel(-400, 255); 
-  //m1.poll();
-  //m1.calc_ticks();
+  servo.moveTo(position);
+  servo.run();
 }
+
+/*
+void process_serial() {
+  if(Serial.available()) {
+      char c = Serial.read();
+      float p, i, d; 
+      int choice;
+      switch(c) {
+        
+        case 'q':
+          //d = motPID.GetKd(); 
+          p = Serial.parseFloat();
+          //i = motPID.GetKi();
+          //motPID.SetTunings(p, i, d);
+          motPID.setKp(p);  
+          Serial.print("D: ");
+          Serial.println(motPID.GetKp());
+          break;
+
+        case 'w':
+          //d = motPID.GetKd(); 
+          //p = motPID.GetKp();
+          i = Serial.parseFloat();
+          //motPID.SetTunings(p, i, d);
+          motPID.setKi(i); 
+          Serial.print("D: ");
+          Serial.println(motPID.GetKi());
+          break; 
+        
+        case 'e':
+          d = Serial.parseFloat();
+          //p = motPID.GetKp();
+          //i = motPID.GetKi();
+          //motPID.SetTunings(p, i, d);
+          motPID.setKd(d); 
+          Serial.print("D: ");
+          Serial.println(motPID.GetKd());
+          break; 
+        
+        case 'a':
+          targetPos = Serial.parseInt();
+          Serial.print("Target Position: ");
+          Serial.println(targetPos);
+          break;
+
+        case 'x':
+          Serial.print("Encoder: "); Serial.print(encoder.read());
+          Serial.print(" - Current Position: "); Serial.print(currentPos);
+          Serial.print(" - Target Position: "); Serial.print(targetPos);
+          Serial.print(" - Error: "); Serial.print(error);
+          Serial.print(" - PID Out: "); Serial.print(pidOut);
+          Serial.println(""); 
+          break;
+
+        case 'c':
+          encoder.readAndReset();
+          targetPos = 0;
+          break;
+
+        default:
+          Serial.print(" P: ");
+          Serial.print(motPID.GetKp());
+          Serial.print(" I: ");
+          Serial.print(motPID.GetKi());
+          Serial.print(" D: ");
+          Serial.println(motPID.GetKd());
+    }
+  }
+}
+*/
