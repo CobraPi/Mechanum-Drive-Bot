@@ -1,0 +1,2263 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "Z_DUMMY_TARGET"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"add_definitions",
+			"include",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"CMakeListsPrivate.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 33,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 28,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 27,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 25,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 26,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 24,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 29,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 31,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 32,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 33,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 34,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 35,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 36,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 37,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 38,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 39,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 40,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 41,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 42,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 44,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 45,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 46,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 47,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 49,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 50,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 51,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 52,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 53,
+				"parent" : 3
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -Os -Wall -ffunction-sections -fdata-sections -flto -mmcu=atmega2560"
+				},
+				{
+					"fragment" : "-std=gnu++11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "ARDUINO=10808"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "ARDUINO_ARCH_AVR"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "ARDUINO_AVR_MEGA2560"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "F_CPU=16000000L"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "PLATFORMIO=60104"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "__AVR_ATmega2560__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 10,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/src"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/libraries/Wire/src"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/ServoMotor"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/PID"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/Encoder"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/Encoder/utility"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/RF24"
+				},
+				{
+					"backtrace" : 18,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/RF24/utility"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/PWM_Motor"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/NRFLite"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/libraries/SPI/src"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/cores/arduino"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/variants/mega"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/Controller"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/MechanumDrive"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/Motor"
+				},
+				{
+					"backtrace" : 27,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/libraries/HID/src"
+				},
+				{
+					"backtrace" : 29,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src"
+				},
+				{
+					"backtrace" : 30,
+					"path" : "/Users/joey/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/Users/joey/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include-fixed"
+				},
+				{
+					"backtrace" : 32,
+					"path" : "/Users/joey/.platformio/packages/toolchain-atmelavr/avr/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				1,
+				4,
+				6,
+				19,
+				21,
+				23,
+				26,
+				28,
+				44,
+				158,
+				166,
+				168,
+				170,
+				171,
+				173,
+				174,
+				175,
+				176,
+				177,
+				179,
+				182,
+				183,
+				186,
+				188,
+				189,
+				190,
+				191,
+				192,
+				193,
+				203,
+				209,
+				214,
+				220,
+				222,
+				225,
+				230,
+				233,
+				235,
+				238,
+				240,
+				243,
+				245,
+				255,
+				257,
+				261,
+				263,
+				265
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=gnu11 -fno-fat-lto-objects -Os -Wall -ffunction-sections -fdata-sections -flto -mmcu=atmega2560"
+				},
+				{
+					"fragment" : "-std=gnu11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "ARDUINO=10808"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "ARDUINO_ARCH_AVR"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "ARDUINO_AVR_MEGA2560"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "F_CPU=16000000L"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "PLATFORMIO=60104"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "__AVR_ATmega2560__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 10,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/src"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/libraries/Wire/src"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/ServoMotor"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/PID"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/Encoder"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/Encoder/utility"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/RF24"
+				},
+				{
+					"backtrace" : 18,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/RF24/utility"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/PWM_Motor"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/NRFLite"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/libraries/SPI/src"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/cores/arduino"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/variants/mega"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/Controller"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/MechanumDrive"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot/lib/Motor"
+				},
+				{
+					"backtrace" : 27,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/libraries/HID/src"
+				},
+				{
+					"backtrace" : 29,
+					"path" : "/Users/joey/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src"
+				},
+				{
+					"backtrace" : 30,
+					"path" : "/Users/joey/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/Users/joey/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include-fixed"
+				},
+				{
+					"backtrace" : 32,
+					"path" : "/Users/joey/.platformio/packages/toolchain-atmelavr/avr/include"
+				}
+			],
+			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				207,
+				211,
+				228
+			]
+		}
+	],
+	"id" : "Z_DUMMY_TARGET::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -Os -Wall -ffunction-sections -fdata-sections -flto -mmcu=atmega2560",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "Z_DUMMY_TARGET",
+	"nameOnDisk" : "Z_DUMMY_TARGET",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0,
+				3,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114,
+				115,
+				117,
+				118,
+				119,
+				120,
+				121,
+				122,
+				123,
+				124,
+				125,
+				126,
+				127,
+				128,
+				129,
+				130,
+				131,
+				132,
+				133,
+				134,
+				135,
+				136,
+				137,
+				138,
+				139,
+				140,
+				141,
+				142,
+				143,
+				144,
+				145,
+				146,
+				147,
+				148,
+				149,
+				150,
+				151,
+				152,
+				153,
+				154,
+				155,
+				156,
+				157,
+				159,
+				160,
+				161,
+				162,
+				163,
+				164,
+				165,
+				167,
+				169,
+				172,
+				178,
+				180,
+				181,
+				184,
+				185,
+				197,
+				198,
+				199,
+				202,
+				204,
+				216,
+				253
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				1,
+				4,
+				6,
+				19,
+				21,
+				23,
+				26,
+				28,
+				44,
+				116,
+				158,
+				166,
+				168,
+				170,
+				171,
+				173,
+				174,
+				175,
+				176,
+				177,
+				179,
+				182,
+				183,
+				186,
+				188,
+				189,
+				190,
+				191,
+				192,
+				193,
+				203,
+				207,
+				209,
+				211,
+				214,
+				220,
+				222,
+				225,
+				228,
+				230,
+				233,
+				235,
+				238,
+				240,
+				243,
+				245,
+				255,
+				257,
+				261,
+				263,
+				265
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				2,
+				5,
+				7,
+				16,
+				17,
+				18,
+				20,
+				22,
+				24,
+				25,
+				27,
+				29,
+				45,
+				46,
+				187,
+				200,
+				201,
+				205,
+				206,
+				208,
+				210,
+				212,
+				213,
+				215,
+				217,
+				218,
+				219,
+				221,
+				223,
+				224,
+				226,
+				227,
+				229,
+				231,
+				232,
+				234,
+				236,
+				237,
+				239,
+				241,
+				242,
+				244,
+				246,
+				247,
+				248,
+				249,
+				250,
+				251,
+				252,
+				254,
+				256,
+				258,
+				259,
+				260,
+				262,
+				264
+			]
+		},
+		{
+			"name" : "Resources",
+			"sourceIndexes" : 
+			[
+				63,
+				64,
+				79,
+				194,
+				195,
+				196
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "lib/.DS_Store",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/CmdMessenger/CmdMessenger.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/CmdMessenger/CmdMessenger.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/CmdMessenger/example.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/Controller/Controller.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Controller/Controller.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/Encoder/Encoder.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/Encoder.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/README.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/docs/issue_template.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/examples/Basic/Basic.pde",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/examples/NoInterrupts/NoInterrupts.pde",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/examples/SpeedTest/SpeedTest.pde",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/examples/TwoKnobs/TwoKnobs.pde",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/keywords.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/library.properties",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/utility/direct_pin_read.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/utility/interrupt_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Encoder/utility/interrupt_pins.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/MechanumDrive/MechanumDrive.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/MechanumDrive/MechanumDrive.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/Motor/Motor.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Motor/Motor.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/NRFLite/NRFLite.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/NRFLite/NRFLite.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/NRFLite/nRF24L01.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/PID /PID.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/PID /PID.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/PWM_Motor/PWM_Motor.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/PWM_Motor/PWM_Motor.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/.github/ISSUE_TEMPLATE/bug_report.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/.github/ISSUE_TEMPLATE/feature_request.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/.github/ISSUE_TEMPLATE/question.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/.github/workflows/build_arduino.yml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/.github/workflows/build_linux.yml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/.github/workflows/build_platformIO.yml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/.github/workflows/build_rp2xxx.yml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/.github/workflows/doxygen.yml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/.gitignore",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/.readthedocs.yaml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/CMakeLists.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/COMMON_ISSUES.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/CONTRIBUTING.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/README.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/RF24.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/RF24.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/RF24_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/AutoConfig_RF24_DRIVER.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/CPackInfo.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/Cache.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/CompilerWarnings.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/GetLibInfo.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/PreventInSourceBuilds.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/Sanitizers.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/StandardProjectSettings.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/StaticAnalyzers.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/detectCPU.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/pico_sdk_import.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/toolchains/arm64.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/toolchains/armhf.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/toolchains/default.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/toolchains/i686.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/cmake/toolchains/x86_64.cmake",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/datasheets/nRF24L01P_datasheet_v1.pdf",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/datasheets/nRF24L01_datasheet_v2.pdf",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/README.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/arduino.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/attiny.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/atxmega.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/cross_compile.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/linux_install.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/main_page.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/mraa.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/pico_sdk.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/portability.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/python_wrapper.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/rpi_general.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/README.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/RF24_config_8h.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/_static/Logo large.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/_static/custom_material.css",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/_static/new_favicon.ico",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/classRF24.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/conf.py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/deprecated.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/enums.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Arduino/AcknowledgementPayloads.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Arduino/GettingStarted.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Arduino/InterruptConfigure.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Arduino/ManualAcknowledgements.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Arduino/MulticeiverDemo.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Arduino/Scanner.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Arduino/StreamingData.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Linux/AcknowledgementPayloads.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Linux/GettingStarted.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Linux/InterruptConfigure.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Linux/ManualAcknowledgements.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Linux/MulticeiverDemo.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Linux/Scanner.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Linux/StreamingData.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/PicoSDK/AcknowledgementPayloads.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/PicoSDK/GettingStarted.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/PicoSDK/InterruptConfigure.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/PicoSDK/ManualAcknowledgements.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/PicoSDK/MulticeiverDemo.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/PicoSDK/Scanner.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/PicoSDK/StreamingData.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/PicoSDK/default_pins.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Python/AcknowledgementPayloads.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Python/GettingStarted.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Python/InterruptConfigure.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Python/ManualAcknowledgements.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Python/MulticeiverDemo.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/examples/Python/StreamingData.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/index.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/make.bat",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_common_issues.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_contributing.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_docs_arduino.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_docs_attiny.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_docs_atxmega.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_docs_cross_compile.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_docs_linux_install.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_docs_mraa.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_docs_pico_sdk.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_docs_portability.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_docs_python_wrapper.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_docs_rpi_general.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/md_docs_using_cmake.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/modules.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/modules/Porting_GPIO.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/modules/Porting_General.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/modules/Porting_Includes.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/modules/Porting_SPI.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/modules/Porting_Timing.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/nRF24L01_8h.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/pages.rst",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/sphinx/requirements.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/docs/using_cmake.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/doxygen-custom.css",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/AcknowledgementPayloads/AcknowledgementPayloads.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/GettingStarted/GettingStarted.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/InterruptConfigure/InterruptConfigure.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/ManualAcknowledgements/ManualAcknowledgements.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/MulticeiverDemo/MulticeiverDemo.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/StreamingData/StreamingData.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/encodeRadioDetails/encodeRadioDetails.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/encodeRadioDetails/print_details.py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/examples_formatter.conf",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/old_backups/GettingStarted_HandlingFailures/GettingStarted_HandlingFailures.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/old_backups/TransferTimeouts/TransferTimeouts.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/old_backups/pingpair_dyn/pingpair_dyn.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/old_backups/pingpair_irq/pingpair_irq.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/old_backups/pingpair_multi_dyn/pingpair_multi_dyn.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/old_backups/pingpair_sleepy/pingpair_sleepy.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/old_backups/recipes/led_remote/led_remote.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/old_backups/recipes/nordic_fob/nordic_fob.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/old_backups/recipes/pingpair_maple/pingpair_maple.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/old_backups/recipes/readme.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/rf24_ATTiny/rf24ping85/rf24ping85.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/rf24_ATTiny/timingSearch3pin/timingSearch3pin.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples/scanner/scanner.ino",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples_linux/CMakeLists.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples_linux/Makefile.examples",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/acknowledgementPayloads.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples_linux/acknowledgement_payloads.py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/extra/rpi-hub.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples_linux/getting_started.py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/gettingstarted.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/interruptConfigure.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples_linux/interrupt_configure.py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/interrupts/transfer_interrupt.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/manualAcknowledgements.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples_linux/manual_acknowledgements.py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/multiceiverDemo.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples_linux/multiceiver_demo.py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples_linux/readme.md",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/scanner.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_linux/streamingData.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples_linux/streaming_data.py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples_pico/CMakeLists.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_pico/acknowledgementPayloads.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/examples_pico/defaultPins.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_pico/gettingStarted.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_pico/interruptConfigure.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_pico/manualAcknowledgements.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_pico/multiceiverDemo.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_pico/scanner.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/examples_pico/streamingData.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/images/ghetto_sheilding_1.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/images/ghetto_sheilding_2.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/images/pinout.jpg",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/keywords.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/library.json",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/library.properties",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/nRF24L01.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/printf.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/pyRF24/crossunixccompiler.py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/pyRF24/pyRF24.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/pyRF24/setup.py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/ATTiny/RF24_arch_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/ATXMegaD3/RF24_arch_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "lib/RF24/utility/ATXMegaD3/compatibility.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/ATXMegaD3/compatibility.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/ATXMegaD3/gpio.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/ATXMegaD3/gpio.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "lib/RF24/utility/ATXMegaD3/gpio_helper.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/ATXMegaD3/gpio_helper.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/ATXMegaD3/includes.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/ATXMegaD3/spi.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/ATXMegaD3/spi.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/CMakeLists.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/LittleWire/RF24_arch_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/LittleWire/includes.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/MRAA/RF24_arch_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/MRAA/compatibility.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/MRAA/compatibility.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/MRAA/gpio.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/MRAA/gpio.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/MRAA/includes.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/MRAA/spi.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/MRAA/spi.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/RPi/RF24_arch_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "lib/RF24/utility/RPi/bcm2835.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/RPi/bcm2835.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/RPi/compatibility.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/RPi/compatibility.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/RPi/includes.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/RPi/interrupt.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/RPi/interrupt.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/RPi/spi.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/RPi/spi.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/SPIDEV/RF24_arch_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/SPIDEV/compatibility.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/SPIDEV/compatibility.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/SPIDEV/gpio.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/SPIDEV/gpio.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/SPIDEV/includes.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/SPIDEV/interrupt.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/SPIDEV/interrupt.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/SPIDEV/spi.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/SPIDEV/spi.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/Teensy/RF24_arch_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/Template/RF24_arch_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/Template/compatibility.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/Template/gpio.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/Template/includes.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/Template/spi.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/rp2/CMakeLists.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/rp2/RF24_arch_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/rp2/gpio.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/rp2/gpio.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/rp2/spi.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/rp2/spi.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/wiringPi/RF24_arch_config.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/wiringPi/includes.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/RF24/utility/wiringPi/spi.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/RF24/utility/wiringPi/spi.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/ServoMotor/ServoMotor.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/ServoMotor/ServoMotor.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/main.cpp",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}

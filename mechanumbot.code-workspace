@@ -6,6 +6,20 @@
 		{
 			"name": "MechanumDriveBot",
 			"path": "."
+		},
+		{
+			"path": "../JoystickController"
+		},
+		{
+			"path": "../../RoboChobo/Controller/Controller"
+		},
+		{
+			"name": "Joystick Controller",
+			"path": "../JoystickController/Joystick Controller"
+		},
+		{
+			"name": "Joystick Control",
+			"path": "../../JoystickControl/Joystick Control"
 		}
 	],
 	"settings": {}

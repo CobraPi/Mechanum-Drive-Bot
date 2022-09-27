@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot'
+make: Leaving directory `/Users/joey/Projects/MechanumDriveBot/MechanumDriveBot'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

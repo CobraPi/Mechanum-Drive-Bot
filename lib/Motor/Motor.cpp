@@ -1,14 +1,7 @@
 #include "Motor.h"
-//#include <Encoder.h>
 
-Motor::Motor(int motAPin, int motBPin)
-{
+Motor::Motor() {
     _ticks = 0;
-    _motAPin = motAPin;
-    _motBPin = motBPin;
-    pinMode(motAPin, OUTPUT);
-    pinMode(motBPin, OUTPUT);
-    _curSpeed = 0;
     //pinMode(encA, INPUT);
     //pinMode(encB, INPUT);
 }
@@ -34,20 +27,32 @@ void Motor::run() {
 } 
 
 void Motor::drive(int speed) {
-
     _speed = abs(speed);
-    if(speed > 0) {
-        _dir = true;
-        analogWrite(_motAPin, _speed);
-        digitalWrite(_motBPin, 0);
-    } 
-    else {
-        _dir = false;
-        digitalWrite(_motAPin, 0);
-        analogWrite(_motBPin, _speed);
+    _motor.setSpeed(_speed);
+    
+    if(speed > 0) 
+    {
+        if(_dir) 
+        {
+            _motor.run(FORWARD);
+        }
+        else {
+            _motor.run(BACKWARD);
+        }
+    }
+    else if(speed < 0) {
+        if(_dir) {
+            _motor.run(BACKWARD);
+        }
+        else {
+            _motor.run(FORWARD);
+        }
     }
 }
 
+long Motor::get_ticks() {
+    return _ticks;
+}
 
 
 bool Motor::get_direction() {
