@@ -31,12 +31,17 @@ class ServoMotor : public PWM_Motor {
         float get_i();
         float get_d();
         int16_t get_error();
+        void set_wheel_circumference(float circumference);
+        float get_wheel_circumference();
+        void set_encoder_pulses_per_rev(uint16_t pulses);
 
     protected:
         PID _pid;
     private:
+        uint16_t _encoderPulsesPerRev;
         bool _direction; 
-        int16_t _pwmSpeed; // [-100, 100] 
+        float _pwmSpeed; // [-1000, 1000]
+        float _wheelCircumference;
         float _targetRpm; // desired speed in rpm
         float _currentRpm; // current speed in rpm
         float _error;

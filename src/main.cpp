@@ -68,17 +68,18 @@ ControlPacket _radioData;
 //AF_DCMotor M_FR(1); // Front right M_RL
 //AF_DCMotor M_FL(2); // Fornt left M_RL
 //AF_DCMotor M_RR(3); // Rear right M_RL
+//PWM_Motor mot;
 ServoMotor M_RL(PIN_RL_EN_A, PIN_RL_EN_B); // Rear left M_RL
-ServoMotor M_RR(PIN_RR_EN_A, PIN_RR_EN_B);
+//ServoMotor M_RR(PIN_RR_EN_A, PIN_RR_EN_B);
 //ServoMotor M_RL(PIN_RL_EN_A, PIN_RL_EN_B);
 //AccelMotor M_RL(PIN_RL_EN_A, PIN_RL_EN_B);
 
 //Encoder E_FL(PIN_FL_EN_A, PIN_FL_EN_B);
 Encoder E_RL(PIN_RL_EN_A, PIN_RL_EN_B); // Rear left encoder
 //Encoder E_FR(PIN_FR_EN_B, PIN_FR_EN_A);
-Encoder E_RR(PIN_RR_EN_A, PIN_RR_EN_B); // Rear right motor
+//Encoder E_RR(PIN_RR_EN_A, PIN_RR_EN_B); // Rear right motor
 #define DISPLAY_TIME_MS 300
-
+#define MAX_RPM 150
 bool radioMode; // TX = 1 RX = 0
 bool dir = true;
 int sign = -1;
@@ -95,6 +96,7 @@ void handle_get_pid(void);
 void handle_get_rpm(void);
 void handle_get_pwm(void);
 void handle_set_sample_time(void);
+void handle_set_pwm(void);
 void register_callbacks(void);
 
 void makePayload(uint8_t i);
@@ -112,7 +114,8 @@ enum {
     GET_RPM,
     GET_PID,
     GET_PWM,
-    SET_SAMPLE_TIME
+    SET_SAMPLE_TIME,
+    SET_PWM
 };
 
 void process_serial() {
@@ -134,29 +137,47 @@ long encoderCounts;
 long displayTime; // time in ms for serial printing
 #define RPM 200
 double radPerSec, rpm;
-double pwmDuty;
+double pwm = 0;
 bool direction;
 
 void setup() {
-  // put your setup code here, to run once:
-  M_RL.init(PIN_RL_PWM_CW, PIN_RL_PWM_CCW); // initialize pwm M_RL pins
-  M_RR.init(PIN_RR_PWM_CW, PIN_RR_PWM_CCW); // initialize pwm M_RR pins
+    //mot.init(PIN_RL_PWM_CW, PIN_RL_PWM_CCW);
+    //mot.set_duty(-100);
+    // put your setup code here, to run once:
+  //M_RR.init(PIN_RR_PWM_CW, PIN_RR_PWM_CCW); // initialize pwm M_RR pins
   Serial.begin(115200);
   //encoderCounts = E_RL.read();
-  register_callbacks();
-  displayTime = millis();
+  //displayTime = millis();
+  M_RL.init(PIN_RL_PWM_CW, PIN_RL_PWM_CCW); // initialize pwm M_RL pins
+  M_RL.set_encoder_pulses_per_rev(1000);
+  M_RL.set_wheel_circumference(2.0);
   M_RL.set_sample_time(5);
+  M_RL.set_pid(2, 0.7, 0.04);
   M_RL.set_rpm(0);
-  M_RR.set_sample_time(5);
-  M_RR.set_rpm(0);
+  //register_callbacks();
+  pulseTime = millis();
 }
 
 void loop()
 {
+    if(millis() - pulseTime > 40) {
+        if(rpm > MAX_RPM)
+            dir= false;
+        else if(rpm < -MAX_RPM)
+            dir=true;
+        if(dir)
+            rpm++;
+        else
+            rpm--;
+
+        M_RL.set_rpm(rpm);
+        pulseTime = millis();
+        Serial.println(rpm);
+    }
+    //ser.feedinSerialData();
     M_RL.tick(E_RL.read());
-    M_RR.tick(E_RR.read());
-    ser.feedinSerialData();
 }
+
 
 void register_callbacks(void) {
     ser.attach(SET_PID, handle_set_pid);
@@ -165,6 +186,13 @@ void register_callbacks(void) {
     ser.attach(GET_RPM, handle_get_rpm);
     ser.attach(GET_PWM, handle_get_pwm);
     ser.attach(SET_SAMPLE_TIME, handle_set_sample_time);
+    ser.attach(SET_PWM, handle_set_pwm);
+}
+
+void handle_set_pwm(void) {
+    int16_t motor = ser.readBinArg<int16_t>();
+    int16_t pwm = ser.readBinArg<int16_t>();
+    M_RL.set_duty(pwm);
 }
 
 void handle_set_pid(void) {
@@ -177,7 +205,7 @@ void handle_set_pid(void) {
             M_RL.set_pid(p, i, d);
             break;
         case REAR_RIGHT:
-            M_RR.set_pid(p, i, d);
+            //M_RR.set_pid(p, i, d);
             break;
     }
 };
@@ -188,9 +216,8 @@ void handle_set_rpm(void) {
     int16_t rlRpm = ser.readBinArg<int16_t>();
     int16_t rrRpm = ser.readBinArg<int16_t>();
 
-    M_RL.set_rpm(rpm);
+    M_RL.set_rpm(rlRpm);
     //M_RR.set_rpm(rpm);
-    }
 }
 
 void handle_get_rpm(void) {
@@ -201,7 +228,7 @@ void handle_get_rpm(void) {
             rpm = M_RL.get_rpm();
             break;
         case REAR_RIGHT:
-            rpm = M_RR.get_rpm();
+            //rpm = M_RR.get_rpm();
             break;
     }
     ser.sendCmdStart(GET_RPM);
@@ -217,7 +244,7 @@ void handle_get_pwm(void) {
             pwm = M_RL.get_pwm();
             break;
         case REAR_RIGHT:
-            pwm = M_RR.get_pwm();
+            //pwm = M_RR.get_pwm();
             break;
     }
     ser.sendCmdStart(GET_PWM);
@@ -235,9 +262,9 @@ void handle_get_pid(void) {
             d = M_RL.get_d();
             break;
         case REAR_RIGHT:
-            p = M_RR.get_p();
-            i = M_RR.get_i();
-            d = M_RR.get_d();
+            //p = M_RR.get_p();
+            //i = M_RR.get_i();
+            //d = M_RR.get_d();
             break;
     }
     ser.sendCmdStart(GET_PID);
@@ -255,7 +282,7 @@ void handle_set_sample_time(void) {
             M_RL.set_sample_time(sampleTime);
             break;
         case REAR_RIGHT:
-            M_RR.set_sample_time(sampleTime);
+            //M_RR.set_sample_time(sampleTime);
             break;
     }
 }

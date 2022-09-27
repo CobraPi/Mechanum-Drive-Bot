@@ -7,7 +7,7 @@ ServoMotor::ServoMotor(uint8_t pinEnA, uint8_t pinEnB) {
     _kp = P;
     _ki = I;
     _kd = D;
-    _pid.setLimits(-100, 100);
+    _pid.setLimits(-1000, 1000);
     _pid.setPID(_kp,_ki,_kd);
     _sampleStartTime = millis();
     _direction = true;
@@ -70,13 +70,13 @@ void ServoMotor::tick(long ticks) {
     _curTicks = ticks;
     if(millis() - _sampleStartTime > _sampleTime) {
         _deltaTicks = _curTicks - _prevTicks;
-        _radPerSec = (2.0 * M_PI * _deltaTicks) / (ENCODER_PULSES_PER_REV * (float)(_sampleTime/1000.0));
+        _radPerSec = (_wheelCircumference * M_PI * _deltaTicks) / (_encoderPulsesPerRev * (float)(_sampleTime / 1000.0));
         _currentRpm = _radPerSec * RAD_PER_SEC_TO_RPM;
         _prevTicks = _curTicks;
         _sampleStartTime = millis();
         _error = _targetRpm - _currentRpm;
-        _duty = _pid.compute(_error);
-        set_duty(_duty);
+        _pwmSpeed = _pid.compute(_error);
+        set_duty(_pwmSpeed);
     }
 }
 
@@ -86,4 +86,12 @@ int16_t ServoMotor::get_error() {
 
 void ServoMotor::set_sample_time(float sampleTime) {
     _sampleTime = sampleTime;
+}
+
+void ServoMotor::set_wheel_circumference(float circumference) {
+    _wheelCircumference = circumference;
+}
+
+void ServoMotor::set_encoder_pulses_per_rev(uint16_t pulses) {
+    _encoderPulsesPerRev = pulses;
 }
