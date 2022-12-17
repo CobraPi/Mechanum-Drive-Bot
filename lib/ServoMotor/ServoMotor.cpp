@@ -2,8 +2,10 @@
 
 
 /*
-    Default constructor
+    Default constructor -initially creates the Servo Motor Object
+    @author: Joye Orduna
 */
+
 ServoMotor::ServoMotor() {
     // initialize encoder with supplied pins  
     _pid.setLimits(-MAX_HARDWARE_PWM, MAX_HARDWARE_PWM);
