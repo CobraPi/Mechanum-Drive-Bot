@@ -26,13 +26,13 @@ ServoMotor::ServoMotor(uint8_t pinEnA, uint8_t pinEnB) {
     Set's the speed sample time for PID calculation
 */
 void ServoMotor::set_sample_time_ms(long sampleTime) {
-    _mode = LOW_RESOLUTION;
+    _motorMode = LOW_RESOLUTION;
     _sampleTime = sampleTime;
     _sampleStartTime = millis();
 }
 
 void ServoMotor::set_sample_time_us(long sampleTime) {
-    _mode = HIGH_RESOLUTION;
+    _motorMode = HIGH_RESOLUTION;
     _sampleTime = sampleTime;
     _sampleStartTime = micros();
 }
@@ -84,43 +84,87 @@ void ServoMotor::set_pid(float kp, float ki, float kd) {
     _pid.setPID(_kp, _ki, _kd);
 }
 
-
-
-float ServoMotor::get_rpm() {
-    return _currentRpm;
+float ServoMotor::get_speed() {
+    float speed;
+    switch(_motorState) {
+        case RUNNING_CLOSED_LOOP:
+            speed = _currentRpm;
+            break;
+        case RUNNING_OPEN_LOOP:
+            speed = _openLoopPwm;
+    }
+    return speed;
 }
 
 // Set the speed in rad/s
-void ServoMotor::set_rpm(float rpm) {
-    _targetRpm = rpm;
+void ServoMotor::set_speed(float speed) {
+    switch(_motorState) {
+        case RUNNING_CLOSED_LOOP:
+            _targetRpm = speed;
+            break;
+        case RUNNING_OPEN_LOOP:
+            _openLoopPwm = (int16_t) speed;
+    } 
+}
+
+ServoMotorState ServoMotor::get_state() {
+    return _motorState;
+}
+
+void ServoMotor::set_state(ServoMotorState state) {
+    _motorState = state;
 }
 
 // Called continuously in main loop
 void ServoMotor::run(long ticks) {
     _curTicks = ticks;
+    _sample_speed(); 
     switch(_motorState){
-        case STOP:
-        case STOPPED:
-            _pwm = 0;
-            break; 
+        case START:
+            _accelerationTarget = _targetRpm;
+            _targetRpm = 1;
+            _motorState = ACCELERATING;
+            _accelerationStartTime = millis();
+            _sampleStartTime = set_start_time_us_ms(_motorMode); //_motorMode == LOW_RESOLUTION ? millis() : micros(); 
         case ACCELERATING:
-        case DECELERATING:
-            break;
-        case RUNNING_CLOSED_LOOP:
-            long timer = _motorMode == LOW_RESOLUTION ? millis() : micros(); 
-            if(timer - _sampleStartTime > _sampleTime) {
-                _deltaTicks = _curTicks - _prevTicks;
-                _radPerSec = (_wheelCircumference * M_PI * _deltaTicks) / (_encoderPulsesPerRev * (float)(_sampleTime / 1000.0));
-                _currentRpm = _radPerSec * RAD_PER_SEC_TO_RPM;
-                _prevTicks = _curTicks;
-                _error = _targetRpm - _currentRpm;
-                _pwm = _pid.compute(_error);
-                _sampleStartTime = _motorMode == LOW_RESOLUTION ? millis() : micros(); 
+            if(millis() - _accelerationStartTime > _accelerationTime) {
+                _targetRpm++;
+                _accelerationStartTime = set_start_time_us_ms(_motorMode);//_motorMode == LOW_RESOLUTION ? millis() : micros(); 
+            }
+            if(_currentRpm >= _targetRpm) {
+                _motorState = RUNNING_CLOSED_LOOP;
             }
             break;
+        case RUNNING_CLOSED_LOOP:
+            _pwm = _pid.compute(_error); 
+            break;
+        case STOP:
+            _decelerationStartTime = set_start_time_us_ms(_motorMode);
+            _motorState = DECELERATING; 
+        case DECELERATING:
+        
+        case STOPPED:
+            _pwm = 0;
+        break;
         case RUNNING_OPEN_LOOP:
             _pwm = _openLoopPwm; 
             break;
     }
     set_pwm(_pwm);
 } 
+
+static long ServoMotor::set_start_time_us_ms(ServoMotorMode mode) {
+    return mode == LOW_RESOLUTION ? millis() : micros();
+}
+
+void ServoMotor::_sample_speed() {
+    long tmr = set_start_time_us_ms(_motorMode);//_motorMode == LOW_RESOLUTION ? millis() : micros(); 
+        if(tmr - _sampleStartTime > _sampleTime) {
+            _deltaTicks = _curTicks - _prevTicks;
+            _radPerSec = (_wheelCircumference * M_PI * _deltaTicks) / (_encoderPulsesPerRev * (float)(_sampleTime / 1000.0));
+            _currentRpm = _radPerSec * RAD_PER_SEC_TO_RPM;
+            _prevTicks = _curTicks;
+            _error = _targetRpm - _currentRpm;
+            _sampleStartTime = set_start_time_us_ms(_motorMode); // 
+        }
+}

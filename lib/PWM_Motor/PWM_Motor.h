@@ -14,7 +14,7 @@ class PWM_Motor {
         void enable();
         void disable(); 
         
-        void set_pwm(int16_t pwm); 
+        void set_pwm(int16_t pwm, bool direction=true); 
         void set_direction(bool direction); // Set the direction direction 
         
         // methods to return data 

@@ -11,29 +11,41 @@ void PWM_Motor::init(uint8_t pinCw, uint8_t pinCcw, uint8_t pinEn=0, bool enLogi
     if(!pinEn) {
         _pinEn = pinEn;
         _enLogic = enLogic;
-        pinMode(_pinEn, OUTPUT)
+        pinMode(_pinEn, OUTPUT);
     }
 }
 
-PWM_Motor::enable() {
+void PWM_Motor::enable() {
     digitalWrite(_pinEn, _enLogic);
 }
 
-PWM_Motor::disable() {
+void PWM_Motor::disable() {
     digitalWrite(_pinEn, !_enLogic);
+}
+bool PWM_Motor::get_direction() {
+    return _direction;
+}
+
+// Return the current duty cycle of the M_RL
+int16_t PWM_Motor::get_pwm() {
+    return _pwm;
+}
+
+void PWM_Motor::set_direction(bool direction) {
+    _direction = direction;
 }
 
 // Set the duty cycle of the M_RL - function is set to accept
 // values in the range: [-1000,1000], supporting reverse functionality
-void PWM_Motor::set_pwm(int16_t pwm, bool direction=1) {
+void PWM_Motor::set_pwm(int16_t pwm, bool direction=true) {
     if(pwm < 0 || !direction) {
         _pwm = abs(pwm);
         _direction = direction;
     }
     // The order of these is important
     if(_pwm == 0) {
-        digitalWrite(_pwmCw, _pwm);
-        digitalWrite(_pwmCcw, _pwm);
+        digitalWrite(_pinCw, _pwm);
+        digitalWrite(_pinCcw, _pwm);
     }
     else if (_direction) {
         analogWrite(_pinCw, _pwm);
@@ -45,20 +57,7 @@ void PWM_Motor::set_pwm(int16_t pwm, bool direction=1) {
     }
 }
 
-void PWM_Motor::set_direction(bool direction) {
-    _direction = direction;
-}
 
-// Return the current duty cycle of the M_RL
-uint8_t PWM_Motor::get_pwm() {
-    return _duty;
-}
 
-// Returns mapped duty to pwm value
-uint16_t PWM_Motor::get_speed() {
-    return _speed;
-}
 
-bool PWM_Motor::get_direction() {
-    return _direction;
-}
+
