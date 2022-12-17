@@ -60,7 +60,7 @@ Encoder Speed calculation
 ω = angular speed (rad/s)
 n = number of pulses
 t = sampling period (s)
-N = pulses per rotation - 1000
+N = pulses per rotation  
 */
 
 ControlPacket _radioData;
@@ -90,10 +90,13 @@ long pulseTime;
 
 CmdMessenger ser = CmdMessenger(Serial,',',';','/');
 
-void handle_set_pid(void);
-void handle_set_rpm(void);
 void handle_get_pid(void);
+void handle_get_pid_params(void);
+
+void handle_set_pid(void);
 void handle_get_rpm(void);
+void handle_set_rpm(void);
+
 void handle_get_pwm(void);
 void handle_set_sample_time(void);
 void handle_set_pwm(void);
@@ -115,7 +118,8 @@ enum {
     GET_PID,
     GET_PWM,
     SET_SAMPLE_TIME,
-    SET_PWM
+    SET_PWM,
+    DATA_DUMP_PID, // Will send a string containing 
 };
 
 void process_serial() {
@@ -151,31 +155,17 @@ void setup() {
   M_RL.init(PIN_RL_PWM_CW, PIN_RL_PWM_CCW); // initialize pwm M_RL pins
   M_RL.set_encoder_pulses_per_rev(1000);
   M_RL.set_wheel_circumference(2.0);
-  M_RL.set_sample_time(5);
-  M_RL.set_pid(2, 0.7, 0.04);
-  M_RL.set_rpm(0);
+  M_RL.set_sample_time_us(300);
+  M_RL.set_pid(5, 3, 0.04);
+  M_RL.set_state(STOPPED);
   //register_callbacks();
   pulseTime = millis();
 }
 
 void loop()
 {
-    if(millis() - pulseTime > 40) {
-        if(rpm > MAX_RPM)
-            dir= false;
-        else if(rpm < -MAX_RPM)
-            dir=true;
-        if(dir)
-            rpm++;
-        else
-            rpm--;
-
-        M_RL.set_rpm(rpm);
-        pulseTime = millis();
-        Serial.println(rpm);
-    }
-    //ser.feedinSerialData();
-    M_RL.tick(E_RL.read());
+    ser.feedinSerialData();
+    M_RL.run(E_RL.read());
 }
 
 
